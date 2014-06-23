@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qml/FontAwesome.qml</file>
+        <file>qml/FontAwesomeVariables.qml</file>
+    </qresource>
+</RCC>
