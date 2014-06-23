@@ -32,7 +32,7 @@ font-awesome-qml provides the [Font Awesome] web fonts to Qt Quick/QML engine.
 
         property string source
                 Set font-awesome Font Loader source, if it is empty it will
-                be used the font-awesome remote provided by MaxCDN
+                be used the font-awesome remote source provided by MaxCDN
                 ("http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf")
 
         property bool loaded: false
@@ -66,4 +66,3 @@ Post - "[Using Fonts Awesome in QML]" by markg85
 [Qt Project]: http://qt-project.org
 [Using Fonts Awesome in QML]: http://kdeblog.mageprojects.com/2012/11/20/using-fonts-awesome-in-qml/
 [qml/font/Variables.qml]: https://github.com/ricardodovalle/font-awesome-qml/blob/master/qml/FontAwesomeVariables.qml
-[MaxCDN]: http://qt-project.org
