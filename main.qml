@@ -30,7 +30,7 @@ Window {
         Text {
             id: text
             font.pointSize: 180
-            font.family: awesome.family()
+            font.family: awesome.family
             text: awesome.loaded ? awesome.icons.fa_money : ""
         }
     }

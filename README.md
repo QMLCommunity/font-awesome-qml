@@ -5,13 +5,7 @@ font-awesome-qml provides the [Font Awesome] web fonts to Qt Quick/QML engine.
 
 ## General Installation
 
-1. Add the files at font folder inside your qml resource.
-
-1. At this example, it is necessary to import the folder font:
-
-        // main.qml
-        import QtQuick 2.2
-        import "qml"
+1. Add the files FontAwesome.qml and FontAwesomeVariables.qml to your project.
 
 1. Using Font Awesome:
 
@@ -21,13 +15,30 @@ font-awesome-qml provides the [Font Awesome] web fonts to Qt Quick/QML engine.
           FontAwesome {
             id: awesome
           }
-          Text {
-            ...
+        Text {
+            id: text
             font.pointSize: 180
-            font.family: awesome.family()
-            text: awesome.icons.fa_money
-          }
+            font.family: awesome.family
+            text: awesome.loaded ? awesome.icons.fa_money : ""
         }
+
+## Avaliable Properties
+
+        property alias  icons:
+                Alias to acess individual font-awesome variables (icons)
+
+        readonly property string family: "FontAwesome"
+                Return font family name
+
+        property string source
+                Set font-awesome Font Loader source, if it is empty it will
+                be used the font-awesome remote provided by MaxCDN
+                ("http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf")
+
+        property bool loaded: false
+                Property to chech if the Font Loader it is ready, if it is using the remote
+                font-awesome CDN it is necessary to check and wait for to be true.
+
 
 ## Considerations
 
@@ -55,3 +66,4 @@ Post - "[Using Fonts Awesome in QML]" by markg85
 [Qt Project]: http://qt-project.org
 [Using Fonts Awesome in QML]: http://kdeblog.mageprojects.com/2012/11/20/using-fonts-awesome-in-qml/
 [qml/font/Variables.qml]: https://github.com/ricardodovalle/font-awesome-qml/blob/master/qml/FontAwesomeVariables.qml
+[MaxCDN]: http://qt-project.org

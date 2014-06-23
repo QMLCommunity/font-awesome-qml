@@ -1,16 +1,15 @@
 import QtQuick 2.2
 
 Item {
-    property alias icons: fontAwesomeVariables
-    property string source
-    property bool loaded: false
 
-    function family() {
-        return "FontAwesome"
-    }
+    property alias  icons: fontAwesomeVariables
+
+    readonly property string family: "FontAwesome"
+
+    property string source
+    property bool   loaded: false
 
     function resource() {
-
         if (source === "")
             return "http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf"
 
