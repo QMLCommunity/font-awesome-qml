@@ -1,10 +1,7 @@
-QuickFontAwesome
+font-awesome-qml
 ================
 
-A simple example showing how to use [Font Awesome] with [Qt Quick]/QML.
-
-It provides all the basic source code files.
-
+font-awesome-qml provides the [Font Awesome] web fonts to Qt Quick/QML engine.
 
 ## General Installation
 
@@ -14,14 +11,14 @@ It provides all the basic source code files.
 
         // main.qml
         import QtQuick 2.2
-        import "font" as Font
+        import "qml"
 
 1. Using Font Awesome:
 
         // main.qml
         Window {
           ...
-          Font.FontAwesome {
+          FontAwesome {
             id: awesome
           }
           Text {
