@@ -34,7 +34,7 @@ font-awesome-qml provides the [Font Awesome] web fonts to Qt Quick/QML engine.
 I needed to replace the "-" character, from Font Awesome icons name, to  "_", because
 QML/JS doesn't accept  minus character at variables name.
 
-You can see all availables icons at [qml/font/Variables.qml] file.
+You can see all availables icons at [qml/FontAwesomeVariables.qml] file.
 
 ## Versions Tested
 
@@ -54,4 +54,4 @@ Post - "[Using Fonts Awesome in QML]" by markg85
 [Qt Quick]: http://qt-project.org/doc/qt-5/qtquick-index.html
 [Qt Project]: http://qt-project.org
 [Using Fonts Awesome in QML]: http://kdeblog.mageprojects.com/2012/11/20/using-fonts-awesome-in-qml/
-[qml/font/Variables.qml]: https://github.com/ricardodovalle/QuickFontAwesome/blob/master/qml/font/Variables.qml
+[qml/font/Variables.qml]: https://github.com/ricardodovalle/font-awesome-qml/blob/master/qml/FontAwesomeVariables.qml
