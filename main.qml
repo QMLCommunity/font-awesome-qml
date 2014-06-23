@@ -37,8 +37,6 @@ Window {
         }
     }
 
-
-
     MouseArea {
         anchors.fill: parent
         hoverEnabled: true
