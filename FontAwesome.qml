@@ -1,8 +1,9 @@
 import QtQuick 2.2
 
 Item {
-    property alias icons: variables
+    property alias icons: fontAwesomeVariables
     property string source
+    property bool loaded: false
 
     function family() {
         return "FontAwesome"
@@ -17,11 +18,16 @@ Item {
     }
 
     FontLoader {
-        id: fontAwesome
+        id: fontAwesomeLoader
         source: resource()
+
+        onStatusChanged: {
+            if (fontAwesomeLoader.status === FontLoader.Ready)
+                loaded = true
+        }
     }
 
     FontAwesomeVariables {
-        id: variables
+        id: fontAwesomeVariables
     }
 }
