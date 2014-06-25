@@ -14,6 +14,9 @@ font-awesome-qml provides the [Font Awesome] web fonts to Qt Quick/QML engine.
 1. Using Font Awesome:
 
         // main.qml
+
+        import "types" as Awesome
+
         Window {
           ...
           FontAwesome {
