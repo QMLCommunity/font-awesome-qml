@@ -1,32 +1,21 @@
 import QtQuick 2.2
 
-Item {
+import "types" as Awesome
 
-    property alias  icons: fontAwesomeVariables
+Item {
+    id: awesome
+
+    property alias icons: variables
+    property alias loaded: loader.loaded
+    property alias resource: loader.resource
 
     readonly property string family: "FontAwesome"
 
-    property string source
-    property bool   loaded: false
-
-    function resource() {
-        if (source === "")
-            return "http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf"
-
-        return source
+    Awesome.Loader {
+        id: loader
     }
 
-    FontLoader {
-        id: fontAwesomeLoader
-        source: resource()
-
-        onStatusChanged: {
-            if (fontAwesomeLoader.status === FontLoader.Ready)
-                loaded = true
-        }
-    }
-
-    FontAwesomeVariables {
-        id: fontAwesomeVariables
+    Awesome.Variables {
+        id: variables
     }
 }

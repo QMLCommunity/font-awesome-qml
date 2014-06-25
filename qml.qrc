@@ -2,6 +2,9 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>FontAwesome.qml</file>
-        <file>FontAwesomeVariables.qml</file>
+        <file>types/Button.qml</file>
+        <file>types/Text.qml</file>
+        <file>types/Variables.qml</file>
+        <file>types/Loader.qml</file>
     </qresource>
 </RCC>
