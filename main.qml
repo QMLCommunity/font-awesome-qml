@@ -20,7 +20,6 @@ Window {
     }
 
     ColumnLayout {
-
         anchors.centerIn: parent
 
         Text {
@@ -35,13 +34,16 @@ Window {
             font.family: awesome.family
             text: awesome.loaded ? awesome.icons.fa_money : ""
         }
+
+        Awesome.Text {
+            icon: awesome.icons.fa_align_right
+            text: "fa_align_right"
+        }
     }
 
     MouseArea {
         anchors.fill: parent
         hoverEnabled: true
-
-        onClicked: Qt.quit();
         onEntered: { base.color = "#1d9d74"; text.color = "#ffffff" }
         onExited:  { base.color = "#ffffff"; text.color = "#000000" }
     }
