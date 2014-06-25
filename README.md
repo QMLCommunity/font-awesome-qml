@@ -61,6 +61,14 @@ Font Awesome: 4.1.0
 
 Post - "[Using Fonts Awesome in QML]" by markg85
 
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Added some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
 [Font Awesome]: http://fortawesome.github.io/Font-Awesome/
 [Qt Quick]: http://qt-project.org/doc/qt-5/qtquick-index.html
 [Qt Project]: http://qt-project.org
