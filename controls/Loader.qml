@@ -27,22 +27,15 @@
 **
 ****************************************************************************/
 
-/** @brief A simple wrapper to use Font Awesome with Qt Quick and QML
+import QtQuick 2.0
 
-    @author Ricardo do Valle Flores de Oliveira
-    @date June 2014
-*/
+FontLoader {
+    id: loader
 
-#include <QGuiApplication>
-#include <QQmlApplicationEngine>
+    property string resource
+    property bool   loaded: false
 
-int main(int argc, char *argv[])
-{
-    QGuiApplication app(argc, argv);
-    app.setApplicationVersion("4.1.0.0");
+    source: resource
 
-    QQmlApplicationEngine engine;
-    engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
-
-    return app.exec();
+    onStatusChanged: (status === FontLoader.Ready) ?  loaded = true : loaded = false
 }

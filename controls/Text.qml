@@ -1,4 +1,3 @@
-
 /****************************************************************************
 **
 ** The MIT License (MIT)
@@ -28,64 +27,35 @@
 **
 ****************************************************************************/
 
-import QtQuick 2.2
-import QtQuick.Controls 1.2
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.0
+import QtQuick 2.0
+import QtQuick.Controls 1.0
+import QtQuick.Layouts 1.0
 
-import "controls" as Awesome
-import "view" as View
+Text {
+    id: roottext
 
-Window {
-    visible: true
-    width: 1024
-    height: 768
+    property alias  spacing: row.spacing
+    property alias  text: content.text
+    property color  color: "black"
+    property font   font
+    property string icon
 
-    FontAwesome {
-        id: awesome
-        resource: "qrc:///resource/fontawesome-webfont.ttf"
-        // resource: "http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf"
-    }
-
-    Rectangle {
-        id: base
-        anchors.fill: parent
-        color: "#ffffff"
-    }
-
-    ColumnLayout {
-        anchors.fill: parent
-        spacing: 20
+    RowLayout {
+        id: row
 
         Text {
-            anchors.horizontalCenter: parent.horizontalCenter
-            text: "Source code version " + Qt.application.version
-        }
-
-        Text {
-            anchors.horizontalCenter: parent.horizontalCenter
-            font.pointSize: 15
+            color: roottext.color
+            font.pointSize: roottext.font.pointSize
             font.family: awesome.family
-            text: awesome.loaded ? awesome.icons.fa_money : ""
+            renderType: Text.NativeRendering
+            text: awesome.loaded ? icon : ""
         }
 
-        Awesome.Button {
-            anchors.horizontalCenter: parent.horizontalCenter
-            icon: awesome.icons.fa_align_right
-            text: "fa_align_right"
-        }
-
-
-        GridView {
-            Layout.fillHeight:  true
-            Layout.fillWidth: true
-
-            cellWidth: 250
-            cellHeight: 25
-            focus: true
-
-            model: View.Model {}
-            delegate: View.Delegate {}
+        Text {
+            id: content
+            color: roottext.color
+            font.pointSize: roottext.font.pointSize
+            renderType: Text.NativeRendering
         }
     }
 }

@@ -2,9 +2,12 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>FontAwesome.qml</file>
-        <file>types/Button.qml</file>
-        <file>types/Text.qml</file>
-        <file>types/Variables.qml</file>
-        <file>types/Loader.qml</file>
+        <file>controls/Button.qml</file>
+        <file>controls/Loader.qml</file>
+        <file>controls/Text.qml</file>
+        <file>controls/Variables.qml</file>
+        <file>view/Model.qml</file>
+        <file>view/Delegate.qml</file>
+        <file>view/Grid.qml</file>
     </qresource>
 </RCC>

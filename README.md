@@ -9,7 +9,7 @@ font-awesome-qml provides the [Font Awesome] web fonts to Qt Quick/QML engine.
 
 1. If necessary import FontAwesome types
 
-        import "types" as Awesome
+        import "controls" as Awesome
 
 1. Using Font Awesome:
 
@@ -18,18 +18,17 @@ font-awesome-qml provides the [Font Awesome] web fonts to Qt Quick/QML engine.
         import "types" as Awesome
 
         Window {
-          ...
+
           FontAwesome {
             id: awesome
           }
+
           Text {
               id: text
               font.pointSize: 180
               font.family: awesome.family
               text: awesome.loaded ? awesome.icons.fa_money : ""
           }
-
-          // OR
 
           Awesome.Text {
             icon: awesome.icons.fa_align_right

@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resource/icon/font-awesome-qml.icns</file>
+        <file>resource/icon/font-awesome-qml.ico</file>
+        <file>resource/icon/font-awesome-qml.png</file>
+        <file>resource/icon/font-awesome-qml@2x.ico</file>
+        <file>resource/icon/font-awesome-qml@2x.png</file>
+    </qresource>
+</RCC>
