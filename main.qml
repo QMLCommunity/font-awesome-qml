@@ -55,6 +55,7 @@ Window {
 
     ColumnLayout {
         anchors.fill: parent
+        anchors.horizontalCenter: parent.horizontalCenter
         spacing: 20
 
         Text {
@@ -71,8 +72,8 @@ Window {
 
         Awesome.Button {
             anchors.horizontalCenter: parent.horizontalCenter
-            icon: awesome.icons.fa_align_right
-            text: "fa_align_right"
+            icon: awesome.icons.fa_money
+            text: "fa_money"
         }
 
 

@@ -15,12 +15,14 @@ font-awesome-qml provides the [Font Awesome] web fonts to Qt Quick/QML engine.
 
         // main.qml
 
-        import "types" as Awesome
+        import "controls" as Awesome
 
         Window {
 
           FontAwesome {
             id: awesome
+            // resource: "qrc:///resource/fontawesome-webfont.ttf"
+            resource: "http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf"
           }
 
           Text {
@@ -31,8 +33,13 @@ font-awesome-qml provides the [Font Awesome] web fonts to Qt Quick/QML engine.
           }
 
           Awesome.Text {
-            icon: awesome.icons.fa_align_right
-            text: "fa_align_right"
+            icon: awesome.icons.fa_money
+            text: "fa_money"
+          }
+
+          Awesome.Button {
+            icon: awesome.icons.fa_money
+            text: "fa_money"
           }
         }
 
@@ -46,9 +53,7 @@ font-awesome-qml provides the [Font Awesome] web fonts to Qt Quick/QML engine.
                 font-awesome CDN it is necessary to check and wait for to be true.
 
         property alias resource
-                Set font-awesome Font Loader source, if it is empty it will
-                be used the font-awesome remote source provided by MaxCDN
-                ("http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/fonts/fontawesome-webfont.ttf")
+                Set font-awesome Font Loader source
 
         readonly property string family: "FontAwesome"
                 Return font family name
@@ -58,13 +63,17 @@ font-awesome-qml provides the [Font Awesome] web fonts to Qt Quick/QML engine.
 I needed to replace the "-" character, from Font Awesome icons name, to  "_", because
 QML/JS doesn't accept  minus character at variables name.
 
-You can see all availables icons at [qml/FontAwesomeVariables.qml] file.
+You can see all availables icons at [controls/Variables.qml] file.
 
 ## Versions Tested
 
 Qt Version: 5.3
 
 Font Awesome: 4.1.0
+
+## Screenshot
+
+![screenshot](/resource/screenshot/screenshot.png?raw=true)
 
 ## Thanks
 
@@ -86,4 +95,4 @@ Post - "[Using Fonts Awesome in QML]" by markg85
 [Qt Quick]: http://qt-project.org/doc/qt-5/qtquick-index.html
 [Qt Project]: http://qt-project.org
 [Using Fonts Awesome in QML]: http://kdeblog.mageprojects.com/2012/11/20/using-fonts-awesome-in-qml/
-[qml/font/Variables.qml]: https://github.com/ricardodovalle/font-awesome-qml/blob/master/qml/FontAwesomeVariables.qml
+[controls/Variables.qml]: controls/Variables.qml
