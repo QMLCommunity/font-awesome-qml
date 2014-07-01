@@ -26,4 +26,5 @@ OTHER_FILES += \
     font-awesome-qml.rc \
     Info.plist \
     CHANGELOG.md \
-    README.md
+    README.md \
+    LICENSE
