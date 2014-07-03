@@ -31,8 +31,6 @@ import QtQuick.Controls.Styles 1.0
 import QtQuick.Layouts 1.0
 
 Button {
-    id: button
-
     property string icon
 
     style: ButtonStyle {
