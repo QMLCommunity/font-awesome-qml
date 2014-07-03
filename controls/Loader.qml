@@ -30,12 +30,9 @@
 import QtQuick 2.0
 
 FontLoader {
-    id: loader
-
     property string resource
     property bool   loaded: false
 
     source: resource
-
     onStatusChanged: (status === FontLoader.Ready) ?  loaded = true : loaded = false
 }

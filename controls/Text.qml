@@ -32,7 +32,7 @@ import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.0
 
 Text {
-    id: roottext
+    id: root
 
     property alias  spacing: row.spacing
     property alias  text: content.text
@@ -44,8 +44,8 @@ Text {
         id: row
 
         Text {
-            color: roottext.color
-            font.pointSize: roottext.font.pointSize
+            color: root.color
+            font.pointSize: root.font.pointSize
             font.family: awesome.family
             renderType: Text.NativeRendering
             text: awesome.loaded ? icon : ""
@@ -53,8 +53,8 @@ Text {
 
         Text {
             id: content
-            color: roottext.color
-            font.pointSize: roottext.font.pointSize
+            color: root.color
+            font.pointSize: root.font.pointSize
             renderType: Text.NativeRendering
         }
     }
