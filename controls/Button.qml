@@ -56,12 +56,14 @@ Button {
                     font.family: awesome.family
                     renderType: Text.NativeRendering
                     text: awesome.loaded ? icon : ""
+                    visible: !(icon === "")
                 }
                 Text {
                     color: buttonstyle.foregroundColor
                     font: buttonstyle.font
                     renderType: Text.NativeRendering
                     text: control.text
+                    visible: !(control.text === "")
                 }
             }
         }
