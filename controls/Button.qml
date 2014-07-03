@@ -1,6 +1,5 @@
 /****************************************************************************
 **
-** The MIT License (MIT)
 **
 ** Copyright (c) 2014 Ricardo do Valle Flores de Oliveira
 **
@@ -23,14 +22,13 @@
 ** OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 ** SOFTWARE.
 **
-** $END_LICENSE$
 **
 ****************************************************************************/
 
-import QtQuick 2.1
+import QtQuick 2.0
 import QtQuick.Controls 1.0
-import QtQuick.Controls.Styles 1.2
-import QtQuick.Layouts 1.1
+import QtQuick.Controls.Styles 1.0
+import QtQuick.Layouts 1.0
 
 Button {
     id: button
