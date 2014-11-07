@@ -37,7 +37,7 @@
 int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
-    app.setApplicationVersion("4.1.0.0");
+    app.setApplicationVersion("4.2.0.0");
 
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
