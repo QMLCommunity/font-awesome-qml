@@ -76,10 +76,10 @@ fs.readFile(sourceFile, 'utf8', function(err, sourceData) {
 		"QtObject {"
 	].join('\n');
 
-	sourceData.replace(/@fa-var-([^:]+): "(\\[a-f0-9]+)";/g, function(line, name, code) {
+	sourceData.replace(/@fa-var-([^:]+): "\\([a-f0-9]+)";/g, function(line, name, code) {
 		icons++;
 		name = 'fa-' + name;
-		targetData += "\n\treadonly property string " + name.replace(/-/g, '_') + ": \"" + code + "\""
+		targetData += "\n\treadonly property string " + name.replace(/-/g, '_') + ": \"\\u" + code + "\""
 	});
 
 	targetData += "\n}";
