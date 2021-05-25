@@ -74,8 +74,8 @@ You can see all availables icons at [controls/Variables.qml] file.
 ## Versions Tested
 
 ````
-Qt Version   : 5.3
-Font Awesome : 4.1.0
+Qt Version   : 5.9
+Font Awesome : 4.7.0
 ````
 
 ## Screenshot
